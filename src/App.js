@@ -17,7 +17,7 @@ function App() {
         dispatch(
           login({
             uid: authUser.uid,
-            photo: authUser.photoUrl,
+            photo: authUser.photoURL,
             email: authUser.email,
             displayName: authUser.displayName,
           })
@@ -27,7 +27,7 @@ function App() {
         dispatch(logout());
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return <div className='app'>{user ? <Imessage /> : <Login />}</div>;
 }
